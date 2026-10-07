@@ -1,0 +1,17 @@
+<!doctype html>
+<html>
+<head>
+  <title>Docker EC2 Assignment</title>
+</head>
+<body>
+  <h1>Docker Compose on AWS EC2</h1>
+  <p>Frontend container is working.</p>
+  <p id="api">Loading backend...</p>
+
+  <script>
+    fetch('/api')
+      .then(r => r.json())
+      .then(d => document.getElementById('api').innerText = d.message);
+  </script>
+</body>
+</html>
